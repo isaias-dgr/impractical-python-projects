@@ -12,7 +12,7 @@ def get_poor_mans_bar_char(paragraph):
 def get_bar_char(paragraph):
     bars = get_bars()
     letters = paragraph.lower().replace(" ","")
-    [bars[item].append(item) for item in letters if letters.isalpha()]
+    [bars[item].append(item) for item in letters if item.isalpha()]
     return bars
 
 def get_bars():
@@ -23,4 +23,4 @@ if __name__ == "__main__":
     paragraph = """Mr. and Mrs. Dursley of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much."""
     print(paragraph)
     p.pprint(get_poor_mans_bar_char(paragraph))
-    p.pprint(get_poor_mans_bar_char(paragraph))
+    p.pprint(get_bar_char(paragraph))
